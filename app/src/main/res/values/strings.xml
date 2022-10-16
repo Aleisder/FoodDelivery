@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">FoodDelivery</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <string name="burgers_chip">Burgers</string>
+    <string name="pizza_chip">Pizza</string>
+    <string name="sushi_chip">Sushi</string>
+    <string name="drinks_chip">Drinks</string>
+    <string name="desserts_chip">Desserts</string>
+    <string name="combo_chip">Combo</string>
+    <string name="cost">from %d $</string>
 </resources>

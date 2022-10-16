@@ -16,7 +16,7 @@ class BurgersViewModel : ViewModel() {
     private var _burgers = MutableLiveData<List<Burger>>()
     val burgers get() = _burgers
 
-    private var _status = MutableLiveData<BurgersApiState>()
+    private var _status = MutableLiveData<BurgersApiState>(BurgersApiState.LOADING)
     val state get() = _status
 
     init {
