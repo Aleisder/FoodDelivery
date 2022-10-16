@@ -1,12 +1,9 @@
 package com.example.fooddelivery.data.network
 
-import com.example.fooddelivery.data.Burgers
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import com.example.fooddelivery.data.Burger
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Headers
-
-private const val BASE_URL = "https://burgers1.p.rapidapi.com"
 
 interface BurgersApiService {
     @Headers(
@@ -14,16 +11,5 @@ interface BurgersApiService {
         "X-RapidAPI-Host: burgers1.p.rapidapi.com"
     )
     @GET("/burgers")
-    suspend fun getBurgers(): Burgers
-}
-
-private val retrofit = Retrofit.Builder()
-    .baseUrl(BASE_URL)
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
-
-object BurgersApi {
-    val retrofitService: BurgersApiService by lazy {
-        retrofit.create(BurgersApiService::class.java)
-    }
+    suspend fun getBurgers(): Response<List<Burger>>
 }
